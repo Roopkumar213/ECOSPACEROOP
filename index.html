@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO SPACE - Sustainable Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="button-container">
+            🍃 ECO SPACE
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#HOME">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#hero" data-after="Home"></a></li>
+                <a href="signup.html" class="login-button"> <button class="login-button"> SIGN UP</button></a>
+                <a href="login.html" class="login-button"> <button class="login-button"> LOGIN</button></a>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="HOME" class="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">    
+                    <p class="home-description">
+                        <strong>Welcome to ECO SPACE, your trusted platform for eco-friendly shopping!</strong> 🌿<br>
+                        At ECO SPACE, we believe in creating a sustainable future by offering products that are kind to the planet. From reusable items to biodegradable alternatives, our carefully chosen selection helps you make conscious, eco-smart choices every day. Whether you're starting your green journey or looking for sustainable upgrades, we're here to support you every step of the way.<br>
+                        Together, let’s protect our Earth, one eco-friendly product at a time. 🌏
+                    </p>
+                    <a href="#products" class="btn btn-primary home-cta">Explore Products</a>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="home-image">
+                        <img src="https://cdn.pixabay.com/photo/2022/04/15/07/58/sunset-7133867_1280.jpg" alt="Eco Space" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="products">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Bamboo Toothbrushes -->
+                <div class="product-card" data-id="1">
+                    <img src="https://example.com/bamboo-toothbrush.jpg" alt="Bamboo Toothbrush">
+                    <div class="product-info">
+                        <h3>Bamboo Toothbrush</h3>
+                        <p>Eco-friendly alternative to plastic toothbrushes.</p>
+                        <div class="product-price" data-price="5.00">$5.00</div>
+                        <button class="add-to-cart" data-name="Bamboo Toothbrush" data-price="5.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Compostable Garbage Bags -->
+                <div class="product-card" data-id="2">
+                    <img src="https://example.com/compostable-bags.jpg" alt="Compostable Garbage Bags">
+                    <div class="product-info">
+                        <h3>Compostable Garbage Bags</h3>
+                        <p>Made from plant-based materials, they break down naturally.</p>
+                        <div class="product-price" data-price="10.00">$10.00</div>
+                        <button class="add-to-cart" data-name="Compostable Garbage Bags" data-price="10.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Biodegradable Dish Sponges -->
+                <div class="product-card" data-id="3">
+                    <img src="https://example.com/biodegradable-sponges.jpg" alt="Biodegradable Dish Sponges">
+                    <div class="product-info">
+                        <h3>Biodegradable Dish Sponges</h3>
+                        <p>Typically made from natural cellulose or loofah.</p>
+                        <div class="product-price" data-price="3.50">$3.50</div>
+                        <button class="add-to-cart" data-name="Biodegradable Dish Sponges" data-price="3.50">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Beeswax Wraps -->
+                <div class="product-card" data-id="4">
+                    <img src="https://example.com/beeswax-wraps.jpg" alt="Beeswax Wraps">
+                    <div class="product-info">
+                        <h3>Beeswax Wraps</h3>
+                        <p>Reusable wraps for food storage made from natural materials.</p>
+                        <div class="product-price" data-price="12.00">$12.00</div>
+                        <button class="add-to-cart" data-name="Beeswax Wraps" data-price="12.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Plant-based Reusable Kitchen Towels -->
+                <div class="product-card" data-id="5">
+                    <img src="https://example.com/kitchen-towels.jpg" alt="Plant-based Reusable Kitchen Towels">
+                    <div class="product-info">
+                        <h3>Plant-based Reusable Kitchen Towels</h3>
+                        <p>Eco-friendly and washable.</p>
+                        <div class="product-price" data-price="8.00">$8.00</div>
+                        <button class="add-to-cart" data-name="Plant-based Reusable Kitchen Towels" data-price="8.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Wooden Utensils -->
+                <div class="product-card" data-id="6">
+                    <img src="https://example.com/wooden-utensils.jpg" alt="Wooden Utensils">
+                    <div class="product-info">
+                        <h3>Wooden Utensils</h3>
+                        <p>Naturally decomposing, perfect for replacing single-use plastics.</p>
+                        <div class="product-price" data-price="2.50">$2.50</div>
+                        <button class="add-to-cart" data-name="Wooden Utensils" data-price="2.50">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Eco-friendly Scrubbers -->
+                <div class="product-card" data-id="7">
+                    <img src="https://example.com/eco-scrubbers.jpg" alt="Eco-friendly Scrubbers">
+                    <div class="product-info">
+                        <h3>Eco-friendly Scrubbers</h3>
+                        <p>Coconut or natural fiber-based scrubbers for cleaning.</p>
+                        <div class="product-price" data-price="4.00">$4.00</div>
+                        <button class="add-to-cart" data-name="Eco-friendly Scrubbers" data-price="4.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Bamboo Straws -->
+                <div class="product-card" data-id="8">
+                    <img src="https://example.com/bamboo-straws.jpg" alt="Bamboo Straws">
+                    <div class="product-info">
+                        <h3>Bamboo Straws</h3>
+                        <p>A sustainable alternative to plastic straws.</p>
+                        <div class="product-price" data-price="6.00">$6.00</div>
+                        <button class="add-to-cart" data-name="Bamboo Straws" data-price="6.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Jute Shopping Bags -->
+                <div class="product-card" data-id="9">
+                    <img src="https://example.com/jute-bags.jpg" alt="Jute Shopping Bags">
+                    <div class="product-info">
+                        <h3>Jute Shopping Bags</h3>
+                        <p>Durable, reusable bags made from natural fibers.</p>
+                        <div class="product-price" data-price="7.50">$7.50</div>
+                        <button class="add-to-cart" data-name="Jute Shopping Bags" data-price="7.50">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Natural Fiber Doormats -->
+                <div class="product-card" data-id="10">
+                    <img src="https://example.com/doormats.jpg" alt="Natural Fiber Doormats">
+                    <div class="product-info">
+                        <h3>Natural Fiber Doormats</h3>
+                        <p>Biodegradable and made from coir or jute.</p>
+                        <div class="product-price" data-price="15.00">$15.00</div>
+                        <button class="add-to-cart" data-name="Natural Fiber Doormats" data-price="15.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Organic Cotton Tote Bags -->
+                <div class="product-card" data-id="11">
+                    <img src="https://example.com/organic-cotton-tote.jpg" alt="Organic Cotton Tote Bags">
+                    <div class="product-info">
+                        <h3>Organic Cotton Tote Bags</h3>
+                        <p>Biodegradable and stylish reusable bags.</p>
+                        <div class="product-price" data-price="9.00">$9.00</div>
+                        <button class="add-to-cart" data-name="Organic Cotton Tote Bags" data-price="9.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Bamboo Sunglasses -->
+                <div class="product-card" data-id="12">
+                    <img src="https://example.com/bamboo-sunglasses.jpg" alt="Bamboo Sunglasses">
+                    <div class="product-info">
+                        <h3>Bamboo Sunglasses</h3>
+                        <p>Lightweight and sustainable eyewear.</p>
+                        <div class="product-price" data-price="25.00">$25.00</div>
+                        <button class="add-to-cart" data-name="Bamboo Sunglasses" data-price="25.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Cork Wallets and Bags -->
+                <div class="product-card" data-id="13">
+                    <img src="https://example.com/cork-wallets.jpg" alt="Cork Wallets and Bags">
+                    <div class="product-info">
+                        <h3>Cork Wallets and Bags</h3>
+                        <p>Made from renewable cork, durable yet biodegradable.</p>
+                        <div class="product-price" data-price="20.00">$20.00</div>
+                        <button class="add-to-cart" data-name="Cork Wallets and Bags" data-price="20.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Hemp-based Clothing -->
+                <div class="product-card" data-id="14">
+                    <img src="https://example.com/hemp-clothing.jpg" alt="Hemp-based Clothing">
+                    <div class="product-info">
+                        <h3>Hemp-based Clothing</h3>
+                        <p>Strong, breathable, and eco-friendly fabric.</p>
+                        <div class="product-price" data-price="30.00">$30.00</div>
+                        <button class="add-to-cart" data-name="Hemp-based Clothing" data-price="30.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Biodegradable Rubber Flip-flops -->
+                <div class="product-card" data-id="15">
+                    <img src="https://example.com/biodegradable-flipflops.jpg" alt="Biodegradable Rubber Flip-flops">
+                    <div class="product-info">
+                        <h3>Biodegradable Rubber Flip-flops</h3>
+                        <p>Plant-based materials that naturally break down.</p>
+                        <div class="product-price" data-price="18.00">$18.00</div>
+                        <button class="add-to-cart" data-name="Biodegradable Rubber Flip-flops" data-price="18.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Natural Fiber Hats -->
+                <div class="product-card" data-id="16">
+                    <img src="https://example.com/natural-fiber-hats.jpg" alt="Natural Fiber Hats">
+                    <div class="product-info">
+                        <h3>Natural Fiber Hats</h3>
+                        <p>Made from sustainable materials like jute or raffia.</p>
+                        <div class="product-price" data-price="22.00">$22.00</div>
+                        <button class="add-to-cart" data-name="Natural Fiber Hats" data-price="22.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Raffia or Jute Jewelry -->
+                <div class="product-card" data-id="17">
+                    <img src="https://example.com/raffia-jewelry.jpg" alt="Raffia or Jute Jewelry">
+                    <div class="product-info">
+                        <h3>Raffia or Jute Jewelry</h3>
+                        <p>Handmade and compostable.</p>
+                        <div class="product-price" data-price="15.00">$15.00</div>
+                        <button class="add-to-cart" data-name="Raffia or Jute Jewelry" data-price="15.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Recycled Cotton Scarves -->
+                <div class="product-card" data-id="18">
+                    <img src="https://example.com/recycled-cotton-scarves.jpg" alt="Recycled Cotton Scarves">
+                    <div class="product-info">
+                        <h3>Recycled Cotton Scarves</h3>
+                        <p>Repurposed from leftover materials.</p>
+                        <div class="product-price" data-price="12.00">$12.00</div>
+                        <button class="add-to-cart" data-name="Recycled Cotton Scarves" data-price="12.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Eco-friendly Yoga Mats -->
+                <div class="product-card" data-id="19">
+                    <img src="https://example.com/eco-yoga-mats.jpg" alt="Eco-friendly Yoga Mats">
+                    <div class="product-info">
+                        <h3>Eco-friendly Yoga Mats</h3>
+                        <p>Made from natural rubber or cork.</p>
+                        <div class="product-price" data-price="40.00">$40.00</div>
+                        <button class="add-to-cart" data-name="Eco-friendly Yoga Mats" data-price="40.00">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Sustainable Backpacks -->
+                <div class="product-card" data-id="20">
+                    <img src="https://example.com/sustainable-backpacks.jpg" alt="Sustainable Backpacks">
+                    <div class="product-info">
+                        <h3>Sustainable Backpacks</h3>
+                        <p>Crafted from recycled or biodegradable materials.</p>
+                        <div class="product-price" data-price="50.00">$50.00</div>
+                        <button class="add-to-cart" data-name="Sustainable Backpacks" data-price="50.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart" class="container my-5">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total">Total: $0.00</div>
+    </section>
+    <footer>
+        © 2024 ECO SPACE - Sustainable Shopping Platform 
+        ALL RIGHTS 
+    </footer>
+
+    <script src="cart.js"></script>
+  
+</body>
+</html>
